@@ -8,7 +8,7 @@ const initialState = {
 
 };
 
-export const createSlice = createSlice({
+export const authSlice = createSlice({
     name: "auth",
     initialState,
     reducers: {
