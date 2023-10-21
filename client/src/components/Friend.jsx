@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 const Friend = ({friendId, name, subtitle, userPicturePath}) =>{
     
-    const dispatchers = useDispatch();
+    const dispatch= useDispatch();
     const navigate = useNavigate();
     const { _id } = useSelector((state) => state.user);
     const token = useSelector((state) => state.token);
@@ -38,7 +38,7 @@ const Friend = ({friendId, name, subtitle, userPicturePath}) =>{
     return (
         <FlexBetween>
             <FlexBetween gap="1rem">
-                <UserImage image={usePicturePath} size="55px"/>
+                <UserImage image={userPicturePath} size="55px"/>
                 <Box onClick = {() =>{
                     navigate(`/profile/${friendId}`);
                     navigate(0);
